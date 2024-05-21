@@ -1,0 +1,36 @@
+{
+    "products": [
+        {   
+            "id": 1,
+            "name": "Sakura Kinomoto",
+            "size": 15,
+            "price": 45000,
+            "stock": 15,
+            "url": "https://www.manga-news.com/public/images/goodies/card-captor-sakura-clear-card-arc-sakura-kinomoto-rocket-beat-souyokusha-1.jpg"
+        },
+        {   
+            "id": 2,
+            "name": "Spider Gwen",
+            "size": 30,
+            "price": 85000,
+            "stock": 24,
+            "url": "https://i.pinimg.com/originals/00/d7/03/00d703671666de7df936c31971ee9036.jpg"
+        },
+        {   
+            "id": 3,
+            "name": "Lady Sylvanas",
+            "size": 15,
+            "price": 50000,
+            "stock": 8,
+            "url": "https://i5.walmartimages.com/asr/fe6715bc-47f7-4f3a-be66-f76ea6e5eab0.45d1f416a45aae95f092dfbc512d60c4.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff"
+        },
+        {
+            "id": 4,
+            "name": "Bombom",
+            "size": 10,
+            "price": 25000,
+            "stock": 33,
+            "url": "https://img.smyk.com/https://bin.smyk.com/media/product/390/5/atomowki-bojka-breloczek-z-figurka-6098064.jpg"
+        }
+    ]
+}

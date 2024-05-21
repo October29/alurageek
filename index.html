@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Alurageek</title>
+</head>
+<body>
+    <header>
+        <!-- Navigation Menu Section -->
+        <nav class="nav_menu"> 
+            <img class="logo" src="img/aluraLogo.svg" alt="Alurageek logo">
+            <ul class="nav_container">
+                <li class="products_dropdown">
+                    <a href="" class="products_tittle">Productos</a>
+                    <ul class="products_dropdown_content">
+                        <li class="item_nav"><a href="">Figuras</a></li>
+                        <li class="item_nav"><a href="">Posters</a></li>
+                        <li class="item_nav"><a href="">pines</a></li>
+                        <li class="item_nav"><a href="">Camisetas</a></li>
+                    </ul>
+                </li>
+                <fieldset>
+                    <input class="search_imput" name="search" type="text" placeholder="Buscar">
+                    <input class="search_button" type="submit">
+                </fieldset>
+            </ul>
+        </nav>
+    </header>
+    <section class="stock" data-cards>
+        
+    </section>
+    <div class="spawn">
+        <fieldset>
+            <form class="product_info" data-form>
+                <h2>Nuevo producto</h2>
+                <input name="name" type="text" placeholder="Nombre del producto" data-name>
+                <input name="size" type="number" placeholder="Tamaño del articulo (cm)" maxlength="2" data-size>
+                <input name="price" type="number" placeholder="Precio (COP)" data-price>
+                <input name="url" type="text" placeholder="URL" data-url>
+                <input type="submit" value="Agregar Producto">
+            </form>
+        </fieldset>
+        <div class="spawner">
+            <h3>+</h3>
+        </div>
+    </div>
+    
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/show-items.js"></script>
+    <script src="js/add-products-menu.js"></script>
+</body>
+</html>
