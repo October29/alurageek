@@ -4,7 +4,16 @@
     --tertiaryColor: #37b9c5;
     --mainFont: "Silkscreen", sans-serif;
 }
-
+.blur {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: black;
+    opacity: 0;
+    filter: grayscale(0.5);
+    width: 100%;
+    height: 100%;
+}
 .nav_menu {
     display: flex;
     justify-content: space-between;
@@ -125,7 +134,7 @@ fieldset {
 .stock {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1.5rem;
 }
 .card {
@@ -134,7 +143,7 @@ fieldset {
     justify-content: space-between;
     width: 15rem;
     padding: 0.1rem 1rem;
-    margin: 1rem 1rem;
+    margin: 1rem 0.4rem;
     background-color: var(--secundaryColor);
     border-radius: 0.5rem;
     border: var(--mainColor) solid 3px;
@@ -144,6 +153,74 @@ fieldset {
 .card:hover {
     transform: scale(1.02);
 }
+.verification {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 3rem;
+    position: absolute;
+    top: 30%;
+    right: 35%;
+    z-index: 3;
+    width: 20rem;
+    padding: 0 1rem 1rem;
+    opacity: 0;
+    border: 3px solid var(--mainColor);
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 3px 3px 1px var(--mainColor);
+    transform-origin: center;
+}
+.verification_text {
+    font-family: var(--mainFont);
+    text-align: center;
+    color: #381f7c;
+}
+.verification_cancel, .verification_delete {
+    font-family: var(--mainFont);
+    color: white;
+    border: 2px solid var(--mainColor);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1px var(--mainColor);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.verification_cancel {
+    background-color: var(--tertiaryColor);
+}
+.verification_delete {
+    background-color: #c53737;
+}
+.verification_cancel:hover, .verification_delete:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 1px var(--mainColor);
+}
+.verification_cancel:active, .verification_delete:active {
+    transform: scale(1);
+}
+.delete_button {
+    position: relative;
+    top: 0%;
+    left: -5.5%;
+    width: 1.5rem;
+    margin: 0 0 -1rem 0;
+    padding: 0 0 0.1rem 0;
+    font-family: var(--mainFont);
+    color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    border-radius: 0.3rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.delete_button:hover {
+    border: 2px solid white;
+    background-color: var(--mainColor);
+    color: white;
+}
+.delete_button:active {
+    background-color: #c53737;
+    transform: scale(0.9);
+}
 figure {
     display: flex;
     flex-wrap: wrap;
@@ -152,10 +229,12 @@ figure {
     padding: 1rem 0 0 0;
 }
 .item_pic {
-    width: 13rem;
+    height: 13rem;
+    background-size: cover;
     border-radius: 0.5rem;
     border: var(--mainColor) solid 3px;
     box-shadow: 5px 5px 1px var(--mainColor);
+    overflow: hidden;
 }
 .item_pic:hover {
     transform: rotate3d(90deg 5deg 5deg);
@@ -274,6 +353,9 @@ figure {
     color: white;
     text-align: center;
 }
+.add {
+    transition: all 0.1s ease-in-out;
+}
 .colorTwo {
     background-color: #c53737;
     border-color: var(--mainColor);
@@ -283,6 +365,9 @@ figure {
 .show {
     animation: show 0.1s ease-in-out forwards 0.01s;
 }
+.showMiddle {
+    animation: showMiddle 0.1s ease-in-out forwards 0.01s;
+}
 @keyframes show {
     0% {
         opacity: 0;
@@ -290,4 +375,21 @@ figure {
     100% {
         opacity: 1;
     }
+}
+
+@keyframes showMiddle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* stop scrolling */
+
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
 }

@@ -32,8 +32,26 @@
             </ul>
         </nav>
     </header>
+    <div class="blur"></div>
     <section class="stock" data-cards>
-        
+        <div class="verification" data-verification>
+            <p class="verification_text">¿Seguro que quieres eliminar este producto?</p>
+            <button class="verification_delete">Eliminar</button>
+            <button class="verification_cancel">Cancelar</button>
+        </div>
+        <div class="card">
+            <button class="delete_button">x</button>
+            <figure>
+                <img class="item_pic" src="https://i.pinimg.com/736x/69/0f/ed/690fed13f468b995a0ceb4a1057d3f7f.jpg" alt="Sakura Kinomoto - figure">
+                <figcaption class="item_name">nojoda - tamaño 22cm</figcaption>
+            </figure>
+            <div class="buy_control">
+                <button>Comprar</button>
+                <p class="item_price">$ 22000 COP</p>
+            </div>
+            <p class="item_stock"><strong>87</strong> en stock</p>
+    `
+        </div>
     </section>
     <div class="spawn">
         <fieldset>
@@ -47,12 +65,13 @@
             </form>
         </fieldset>
         <div class="spawner">
-            <h3>+</h3>
+            <h3 class="add">+</h3>
         </div>
     </div>
     
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/show-items.js"></script>
-    <script src="js/add-products-menu.js"></script>
+    <script type="module" src="js/add-products-menu.js"></script>
+    <script type="module" src="js/remove-products.js"></script>
 </body>
 </html>

@@ -5,21 +5,35 @@ async function listAPI() {
     return dataAPI
 };
 
-async function createAPI() {
-    const  conexion = await fetch('http://localhost:3004/products',{
+async function createProduct(name, size, price, stock, url) {
+    const connetion = await fetch('http://localhost:3004/products',{
         method: 'POST',
-        headers: {'content-type':'aplication/json'},
+        headers: {'content-type':'application/json'},
         body: JSON.stringify({
-            name:name,
+            name: name,
             size: size,
             price: price,
-            stock:`${stock}`,
-            url:url
+            stock: `${stock}`,
+            url: url
         })
+        
     });
-    const conexionConvertida = conexion.json();
+    const dataAPI = connetion.json();
 
-    return conexionConvertida;
+    if(!connetion.ok) {
+        throw new Error('Ha ocurrido un error al ingresar el producto');
+    }
+    console.log(dataAPI.id);
+    return dataAPI.id;
+};
+
+async function deleteProdut(product) {
+    const connetion = await fetch(`http://localhost:3004/products/${product}`, {
+        method: 'DELETE'
+    });
+    alert(`${product} borrado`); 
 }
 
-export {listAPI};
+
+export {listAPI, createProduct, deleteProdut};
+
