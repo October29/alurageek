@@ -18,27 +18,19 @@
             <ul class="nav_container">
                 <li class="products_dropdown">
                     <a href="" class="products_tittle">Productos</a>
-                    <ul class="products_dropdown_content">
-                        <li class="item_nav"><a href="">Figuras</a></li>
-                        <li class="item_nav"><a href="">Posters</a></li>
-                        <li class="item_nav"><a href="">pines</a></li>
-                        <li class="item_nav"><a href="">Camisetas</a></li>
-                    </ul>
+                    
                 </li>
-                <fieldset>
-                    <input class="search_imput" name="search" type="text" placeholder="Buscar">
-                    <input class="search_button" type="submit">
-                </fieldset>
+                <form id="searchForm">
+                    <fieldset>
+                        <input id="searchInput" class="search_input" name="search" type="text" placeholder="Buscar">
+                        <input class="search_button" type="submit" value="Buscar">
+                    </fieldset>
+                </form>
             </ul>
         </nav>
     </header>
     <div class="blur"></div>
     <section class="stock" data-cards>
-        <div class="verification" data-verification>
-            <p class="verification_text">¿Seguro que quieres eliminar este producto?</p>
-            <button class="verification_delete">Eliminar</button>
-            <button class="verification_cancel">Cancelar</button>
-        </div>
         <div class="card">
             <button class="delete_button">x</button>
             <figure>
@@ -50,9 +42,10 @@
                 <p class="item_price">$ 22000 COP</p>
             </div>
             <p class="item_stock"><strong>87</strong> en stock</p>
-    `
+            `
         </div>
     </section>
+    <p id="noResultsMessage" class="no-results hidden">No se encontraron resultados.</p>
     <div class="spawn">
         <fieldset>
             <form class="product_info" data-form>
@@ -68,10 +61,16 @@
             <h3 class="add">+</h3>
         </div>
     </div>
+    <!-- Pie de pagina -->
+    <footer>
+        <img class="footer-logo" src="./img/aluraLogo.svg" alt="Alurageek logo">
+        <p class="desarrollador">Desarrollado por Luis Puerta</p>
+        <p class="alura-latam">ALURA LATAM - 2024</p>
+    </footer>
+    
     
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/show-items.js"></script>
     <script type="module" src="js/add-products-menu.js"></script>
-    <script type="module" src="js/remove-products.js"></script>
 </body>
 </html>

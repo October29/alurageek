@@ -102,7 +102,7 @@
 fieldset {
     border: none;
 }
-.search_imput {
+.search_input {
     width: 10rem;
     padding: 0.2rem;
     margin: 0 0 0 2rem;
@@ -310,11 +310,17 @@ figure {
     box-shadow: 5px 5px 1px #c53737;
     background-color: var(--mainColor);
 }
-.product_info h2 {
+.product_info h2, .no-results {
     width: 100%;
     font-family: var(--mainFont);
     text-align: center;
     color: white;
+}
+.no-results, .desarrollador, .alura-latam {
+    width: 100%;
+    font-family: var(--mainFont);
+    text-align: center;
+    color: var(--secundaryColor);
 }
 .product_info input {
     padding: 0.2rem;
@@ -385,6 +391,9 @@ figure {
         opacity: 0.8;
     }
 }
+.hidden {
+    display: none;
+}
 
 /* stop scrolling */
 
@@ -392,4 +401,18 @@ figure {
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0 0 0;
+    background-color: var(--mainColor);
+}
+
+
+.footer-logo {
+    width: 30%;
+    margin: auto;
 }
